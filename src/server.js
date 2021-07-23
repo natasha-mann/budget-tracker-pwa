@@ -20,7 +20,6 @@ app.use(express.static("public"));
 
 connect();
 
-// routes
 app.use(routes);
 
 app.listen(PORT, () => {
