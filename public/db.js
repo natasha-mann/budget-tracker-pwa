@@ -22,6 +22,10 @@ request.onsuccess = ({ target }) => {
   }
 };
 
+request.onerror = function (event) {
+  console.log("Woops! " + event.target.errorCode);
+};
+
 function checkDatabase() {
   const transaction = db.transaction(["pending"], "readwrite");
   const store = transaction.objectStore("pending");
